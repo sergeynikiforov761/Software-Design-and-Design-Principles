@@ -1,13 +1,13 @@
 package com.sberbank;
 
 public class Square {
-    private Double side;
+    private final double side;
 
-    public Square(Double side){
+    public Square(double side){
         this.side = side;
     }
 
-    public Double squareCalculation() {
-        return this.side*this.side;
+    public double getArea() {
+        return side * side;
     }
 }

@@ -5,17 +5,16 @@ import org.junit.Test;
 
 public class CircleTest {
 
-    @Test
-    public void squareCalculation() {
-        Circle circleFirst = new Circle(5.);
-        Double firstSquare = 25. * Math.PI;
-        Circle circleSecond = new Circle(0.);
-        Double secondSquare = 0.;
-        Circle circleThird = new Circle(6.);
-        Double thirdSquare = 36. * Math.PI;
+    public final static double DELTA = 1e-15;
 
-        Assert.assertEquals(firstSquare, circleFirst.squareCalculation());
-        Assert.assertEquals(secondSquare, circleSecond.squareCalculation());
-        Assert.assertEquals(thirdSquare, circleThird.squareCalculation());
+    @Test
+    public void getAreaCircle() {
+        Assert.assertEquals(new Circle(5.).getArea(),5. * 5. * Math.PI, DELTA);
     }
+
+    @Test
+    public void getZeroAreaCircle(){
+        Assert.assertEquals(new Circle(0.).getArea(),0. * 0. * Math.PI, DELTA);
+    }
+
 }

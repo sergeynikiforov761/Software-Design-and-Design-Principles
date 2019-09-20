@@ -1,14 +1,14 @@
 package com.sberbank;
 
 public class Circle {
-    private Double radius;
+    private final double radius;
 
-    public Circle(Double radius){
+    public Circle(double radius){
         this.radius = radius;
     }
 
 
-    public Double squareCalculation(){
-        return this.radius*this.radius*Math.PI;
+    public double getArea(){
+        return radius * radius * Math.PI;
     }
 }
